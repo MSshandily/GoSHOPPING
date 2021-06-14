@@ -1,55 +1,74 @@
-<!DOCTYPE html>
-<!DOCTYPE html>
-<html>
+<!DOCTYPE HTML>
+<html lang="en-US">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  
-	<title>buymore</title>
+<title>HTML5 Local Storage Project</title>
+<META charset="UTF-8">
+<META name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<META NAME='rating' CONTENT='General' />
+<META NAME='expires' CONTENT='never' />
+<META NAME='language' CONTENT='English, EN' />
+<META name="description" content="shopping cart project with HTML5 and JavaScript">
+<META name="keywords" content="HTML5,CSS,JavaScript, html5 session storage, html5 local storage">
+<META name="author" content="dcwebmakers.com">
+<script src="storage.js"></script>
+<link rel="stylesheet" href="StorageStyle.css">
 </head>
-<body>
 
-	<div  class="lole" style="background-color:darkblue;padding:10px;text-align:center;">
-  <img src="logo.jpg" width="90px" height="90px"> <h1 style="font-family: fantasy;color: honeydew;">GoSHOPPING</h1>
+
+<body onload="doShowAll()">
+	 <div style="background-color:darkblue;padding:10px;text-align:center;fo">
+  <img src="logo.jpg" width="90px" height="90px"> <h1 style="color: honeydew;">GoSHOPPING</h1>
  
  </div>
 </div>
 
 <br>
 
-<div class="qrarea" style="background-color:darkred;padding:15px;text-align:center;font-family: sans-serif;color: honeydew; ">
+<div class="qrarea" style="background-color:darkred;padding:15px;text-align:center;font-family: sans-serif; ">
   WELCOME TO WAL-MART, GROVE STREET, L.A County
-  <br>
- </div>
-<br>
 
 
 
-<center>
-	<div style="background-color:beige; padding-top: 10px;">
-		<img src="pen.png" style="width:250px">
-		<br>
-		<p style="font-size:20px;font-display: fallback;">008482932, FLAIR CONCORD, PU PRICE: 60 INR</p>
 
-		<br>
-		<br>
-		SUCCESSFULLY ADDED TO CART. 
-		<br>
-		<br>
+  
+</div>
+	<center><h2>Shopping Cart</h2>
+	<p>TIPPY-TIPPY-TAP</p>
+	<form name=ShoppingList style="float: center;">
 
-		Do you wish to:
+		<div id="main">
+			<table>
+				<tr>
 
-		<a href="pen.html"><button>SHOP MORE</button></a> or 
-		<a href="delivery.html"><button>VIEW CART AND CHECKOUT</button>
-</a>
+					<td><b>Item:</b><input type=text name=name></td>
+					<td><b>Quantity:</b><input type=text name=data></td>
 
-	</div>
+				</tr>
+
+				<tr>
+					<td style="width: 1400px;"> 
+					    <input type=button value="Save"   onclick="SaveItem()"> 
+					    <input type=button value="Update" onclick="ModifyItem()"> 
+					    <input type=button value="Delete" onclick="RemoveItem()">
+					</td>
+				</tr>
+			</table>
+		</div>
+
+		<div id="items_table" style="width:1400px;">
+			<h3>Shopping List</h3>
+			<table id=list>
+				Coca Cola
+				<br>
+				Pen
+			</table>
+			<p>
+				<label><input type=button value="Clear" onclick="ClearAll()">
+					<i>* Delete all items</i></label>
+			</p>
+		</div>
+	</form>
 </center>
-
-
 
 </body>
 </html>
